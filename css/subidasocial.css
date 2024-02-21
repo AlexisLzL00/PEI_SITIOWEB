@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url('../photos/A.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.5s ease;
+}
+
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+textarea,
+.input-file-wrapper,
+.input-file-wrapper textarea,
+.input-file-wrapper input[type="text"] {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.9);
+    resize: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-upload-input {
+    font-size: 20px;
+    opacity: 0;
+    margin-bottom: 10px;
+}
+
+.file-upload-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload-btn:hover {
+    background-color: #555;
+}
+
+.input-file-wrapper::before {
+    content: 'Seleccionar archivo';
+    display: inline-block;
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-file-wrapper input[type="file"] {
+    display: none;
+}
+
+.file-upload-label {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .container {
+        max-width: 100%;
+    }
+}

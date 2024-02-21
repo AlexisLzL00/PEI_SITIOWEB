@@ -1,0 +1,131 @@
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #000;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 20px auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        animation: fadeIn 0.5s ease-in-out;
+        overflow: hidden; /* Añadido para ocultar el contenido que sobresale */
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #701a1a;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .file-upload {
+        display: flex;
+        left: 50%; /* Centra horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centrar */
+        align-items: center;
+        justify-content: center;
+        width: 120px; /* Ancho del área de carga de archivos */
+        height: 120px; /* Altura del área de carga de archivos */
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.9); /* Negro más fuerte y semitransparente */
+        color: #fff;
+        cursor: pointer;
+        overflow: hidden;
+        transition: background-color 0.3s ease-in-out;
+        position: relative;
+    }
+
+    .file-upload:hover {
+        background-color: rgba(0, 0, 0, 0.5); /* Cambio de color en hover */
+    }
+
+    .file-upload input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .file-preview {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: absolute;
+        top: 50%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%); /* Ajusta para centrar */
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .file-upload:hover .file-preview {
+        opacity: 1; /* Hacer visible en hover */
+    }
+
+    textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ddd; /* Añadido para un borde suave */
+        background-color: #f8f8f8; /* Color de fondo para la descripción */
+        color: #333; /* Color del texto */
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    p {
+        margin-top: 10px;
+        color: #fff;
+    }
+
+    .error {
+        color: red;
+    }
+
+    .success {
+        color: green;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
