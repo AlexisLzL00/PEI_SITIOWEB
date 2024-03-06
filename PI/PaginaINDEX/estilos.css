@@ -1,0 +1,73 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.main-content button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-content button:hover {
+    background-color: #0056b3;
+}
+
+.header-title h1 {
+    margin: 0;
+}
+
+.navbar a{
+    margin: 0;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.margin-content{
+    flex-basis: 50%;
+    margin-right: 23%;
+}
+
+.main-content .image {
+    flex-basis: 50%;
+    margin-left: 23%;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card img{
+    margin-top: 100px;
+    width: 100%;
+    height:auto;
+}
+
+footer{
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

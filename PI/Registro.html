@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesregistro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <section class="form-register">
+        <h4>REGISTRO</h4>
+        <form action="pagina_insertar_usuarios.php" class="cuadro" method="POST">
+
+            <input class="controls" type="text" name="Nombres" id="nombres" placeholder="Ingrese su nombre(s)">
+            <input class="controls" type="text" name="ApellidoPaterno" id="apellidos" placeholder="Ingrese sus apellidos">
+            <input class="controls" type="email" name="Correo" id="correo" placeholder="Ingrese su correo">
+            <input class="controls" type="password" name="Password" id="contraseña" placeholder="Ingrese su contraseña">
+            <p>Estoy de acuerdo con los <a href="#">Terminos y Condiciones</a></p>
+            <button class="botons" type="submit" title="Ingresar" name="Ingresar">Registrarse</button>
+            <p><a href="login2.php">Ya tengo cuenta</a></p>
+        </form>
+    </section>
+</body>
+</html>
