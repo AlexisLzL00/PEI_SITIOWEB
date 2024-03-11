@@ -1,0 +1,91 @@
+body{
+    background-image: url("trabajo2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100hv;
+    flex-direction: column;
+}
+.form-register{
+    position: relative;
+    width: 450px;
+    background-color: #070F2Be3;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 40px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-register h4{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #24303c00;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.controls {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #9290C3;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    background-color: #070F2B00;
+    
+}
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+    background-color: #070F2B00;
+    
+}
+
+.form-register a:hover {
+    color: white;
+    text-decoration: underline;
+    background-color: #24303c00;
+}
+.form-register:visited {
+    color:#0f0;
+}
+
+.botons {
+    width: 100%;
+    background-color: #1f53c5;
+/*background-color: #535C91;*/
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 0px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.botons:hover{
+    transition: 1s;
+    background-color: #1544ab;
+}
+.cuadro{
+    background-color: #24303c00;
+}

@@ -1,117 +1,33 @@
-<?php
-session_start();
-
-// Verificar si el usuario ya está autenticado
-if (isset($_SESSION["usuario_id"])) {
-    header("Location: index.php");
-    exit();
-}
-
-include 'conexion.php';
-
-// Verificar si ya existe un token en la sesión, si no, generarlo
-if (!isset($_SESSION["csrf_token"]) || empty($_SESSION["csrf_token"])) {
-    $_SESSION["csrf_token"] = bin2hex(random_bytes(32)); // Generar un nuevo token CSRF
-}
-
-$error_message = null;
-
-// Conectar a la base de datos
-if ($conn->connect_error) {
-    die("Connection failed");
-}
-
-// Procesar el formulario si se envía por POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verificar el token CSRF
-    if (isset($_POST["csrf_token"]) && $_POST["csrf_token"] === $_SESSION["csrf_token"]) {
-        $username = mysqli_real_escape_string($conn, $_POST["username"]);
-        $password = $_POST["password"];
-
-        $sql = "SELECT idusuario, username, password FROM usuarios WHERE username = ?";
-        $stmt = $conn->prepare($sql);
-
-        if ($stmt) {
-            $stmt->bind_param("s", $username);
-            $stmt->execute();
-            $stmt->bind_result($usuarioId, $dbUsername, $dbPassword);
-            $stmt->fetch();
-            $stmt->close();
-
-            // Verificar la contraseña utilizando password_verify()
-            if ($usuarioId && password_verify($password, $dbPassword)) {
-                // Almacenar información en la sesión
-                $_SESSION["usuario_id"] = $usuarioId;
-                $_SESSION["username"] = $dbUsername;
-
-                // Redirigir a la página principal
-                header("Location: index.php");
-                exit();
-            } else {
-                $error_message = "Credenciales incorrectas";
-            }
-        } else {
-            $error_message = "Error al preparar la declaración";
-        }
-    } else {
-        $error_message = "Token CSRF inválido";
-    }
-}
-
-// Generar un nuevo token CSRF en cada carga de la página
-$_SESSION["csrf_token"] = bin2hex(random_bytes(32));
-
-// Cerrar la conexión a la base de datos
-$conn->close();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap">
-    <link rel="stylesheet" href="css/estilos.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Inicio de sesion</title>
 </head>
 <body>
+    <form action="Insertar_login.php" method="POST">
+        <h1>INICIAR SESION</h1>
+        <hr>
+        <i class="fa-solid fa-user"></i>
+        <label>Usuario</label>
+        <input type="text" name="Nombres" placeholder="Nombre de usuario">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3 card">
-            <div class="profile-image">
-               <!-- <img src="photos/perf.png" alt="Profile Image"> -->
-            </div>
-            <div class="card-body">
-                <div class="welcome-message">
-                    Welcome! Inicia sesion.
-                </div>
-                <?php if ($error_message): ?>
-                    <div class="custom-alert alert bg-dark mt-3">
-                        <i class="fas fa-exclamation-circle text-white"></i>
-                        <span class="text-white"><?php echo $error_message; ?></span>
-                    </div>
-                <?php endif; ?>
-                <form id="loginForm" method="POST">
-                    <div class="form-group">
-                        <label for="username" class="mt-3">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <input type="hidden" id="csrf_token" name="csrf_token" value="<?php echo $_SESSION["csrf_token"]; ?>">
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+        <i class="fa-solid fa-unlock"></i>
+        <label>Contraseña</label>
+        <input type="password" name="Password" placeholder="Contraseña">
+        <a href="#">¿Olvidaste tu contraseña?</a><br>
+        <hr>
+        <button type="submit">Iniciar Sesion</button>
+        <a href="Registro.html">Crear Cuenta</a>
 
+    </form>
+</body>
+</html>
