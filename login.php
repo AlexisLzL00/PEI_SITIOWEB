@@ -13,8 +13,9 @@
     <title>Inicio de sesion</title>
 </head>
 <body>
-    <form action="Insertar_login.php" method="POST">
-        <h1>INICIAR SESION</h1>
+    <form action="Insertar_login.php" method="POST" >
+        <img src="logo.png" width= "55" height="55" align="left"/> 
+        <h1 class="logo">INICIAR SESION</h1>
         <hr>
         <i class="fa-solid fa-user"></i>
         <label>Usuario</label>

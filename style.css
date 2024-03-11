@@ -26,13 +26,12 @@ form{
     color: aliceblue;
     box-shadow: 7px 13px 37px #000;
 }
-h1{
-    display: block;
+h4{
+    font-size: 32px;
     text-align: center;
-    width: 95%;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #24303c00;
+    font-family: 'Open Sans', sans-serif;
 }
 
 label{
@@ -78,3 +77,9 @@ a:hover{
     color: white;
     text-decoration: underline;
 }
+/*.logo{ /*Logo en fondo de la palabra iniciar sesion
+    background: url("logo.png");
+    background-position: center;
+}
+En login.php forma para que quede alineada a la izquierda
+*/
