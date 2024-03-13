@@ -1,0 +1,66 @@
+/* tabla-admins.css */
+
+body {
+    padding-top: 56px; /* Altura del navbar */
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 0;
+    }
+}
+
+.container {
+    margin-top: 4rem; /* Margen superior ajustado para separar del navbar */
+    margin-left: 7rem;
+    z-index: 1; /* Agrega esta línea para establecer el z-index en 1 */
+}
+
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 5px;
+}
+
+/* Estilos para hacer que la tabla sea más responsiva en dispositivos pequeños */
+@media (max-width: 991px) {
+    .container {
+        margin-left: 10px;
+    }
+
+    .table-responsive {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        margin-top: 2rem; /* Reduzco el margen superior para un mejor espacio en dispositivos pequeños */
+        margin-left: 5rem;
+    }
+}
