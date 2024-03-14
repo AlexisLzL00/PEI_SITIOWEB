@@ -101,7 +101,10 @@ if (isset($_SESSION['username'])) {
     <div class="container mt-5">
     <div class="card">
         <div class="card-header bg-primary text-white">
-            <h2 class="mb-0">Perfil de Usuario</h2>
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="mb-0">Perfil de Usuario</h2>
+                <a href="editar.php" class="btn btn-primary"><i class="fas fa-edit"></i> Editar Perfil</a>
+            </div>
         </div>
         <div class="card-body">
             <div class="row">
@@ -128,6 +131,7 @@ if (isset($_SESSION['username'])) {
         </div>
     </div>
 </div>
+
 
 
 
