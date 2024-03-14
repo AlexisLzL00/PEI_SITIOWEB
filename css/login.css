@@ -124,14 +124,17 @@ body {
     padding: 10px;
 }
 
+
+
 .terms {
     color: #DDD;
     text-align: center;
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: 3px;
 }
 
 .terms a {
     color: #FFF;
     text-decoration: underline;
 }
+
