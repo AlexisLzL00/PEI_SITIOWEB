@@ -44,9 +44,9 @@
                     <i class="fas fa-hard-hat"></i> Trabajo
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Emprendimiento</a>
-                    <a class="dropdown-item" href="#">Crecimiento</a>
-                    <a class="dropdown-item" href="#">Ideas</a>
+                    <a class="dropdown-item" href="trabajo/emprendimiento.php">Emprendimiento</a>
+                    <a class="dropdown-item" href="trabajo/crecimiento.php">Crecimiento</a>
+                    <a class="dropdown-item" href="trabajo/ideas.php">Ideas</a>
                 </div>
             </li>
                 <li class="nav-item active">
