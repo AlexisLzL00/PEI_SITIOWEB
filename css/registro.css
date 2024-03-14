@@ -43,7 +43,7 @@ body {
     text-align: center;
     font-weight: normal;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 40px;
 }
 
@@ -106,6 +106,7 @@ body {
 .logo {
     width: 70px;
     height: 70px;
+    margin-top: 10px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -139,7 +140,7 @@ body {
     color: #DDD;
     text-align: center;
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Estilos para el enlace dentro de términos y condiciones */
