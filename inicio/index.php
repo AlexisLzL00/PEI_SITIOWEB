@@ -40,7 +40,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="#">
-            <img src="../img/a.png" alt="Logo" class="img-fluid">
+            <img src="img/a.png" alt="Logo" class="img-fluid">
             Progrsolab
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -53,6 +53,17 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-hard-hat"></i> Trabajo
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="trabajo/emprendimiento.php">Emprendimiento</a>
+                    <a class="dropdown-item" href="trabajo/crecimiento.php">Crecimiento</a>
+                    <a class="dropdown-item" href="trabajo/ideas.php">Ideas</a>
+                </div>
+            </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#"><i class="fas fa-home"></i> Inicio</a>
                 </li>
