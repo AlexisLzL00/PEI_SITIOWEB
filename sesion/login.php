@@ -17,7 +17,10 @@
                 <img src="../img/a.png" alt="Logo" class="logo">
                 <span class="logo-text">Progrsolab</span>
             </div>
+
+
             <h2>Bienvenido Usuario</h2>
+
             <form action="solicitud_login.php" method="POST">
                 <div class="input-container">
                     <i class="fas fa-user"></i>
@@ -30,7 +33,8 @@
                 </div>
                 <input type="submit" value="Sign In" class="submit">
             </form>
-            <p class="terms">Leer  <a href="#">Terminos & Conditions</a></p>
+            <p class="terms">not user ?  <a href="registro.php">Register</a></p>
+            <p class="terms">Leer  <a href="../terminos.html">Terminos & Conditions</a></p>
         </div>
     </div>
 
